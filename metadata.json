@@ -1,0 +1,6 @@
+{
+  "name": "AI Cùng Em - Phiêu Lưu Tri Thức Lớp 3",
+  "description": "Ứng dụng dạy học phát triển năng lực học sinh lớp 3 theo mô hình 5 trạm phiêu lưu AI - Cô giáo Nguyễn Hoàng Thu Anh, Lớp 3D Trường Tiểu học Khoái Châu 1.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
