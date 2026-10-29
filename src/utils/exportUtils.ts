@@ -108,10 +108,30 @@ export function exportLessonPlanToWord(plan: LessonPlanOutput) {
 }
 
 export function exportStudentsToCSV(students: Student[]) {
-  const headers = ['Mã học sinh', 'Họ và tên', 'Tổ / Nhóm', 'Số nhiệm vụ hoàn thành', 'Tổng điểm', 'Huy hiệu đạt được', 'Tình trạng'];
-  const rows = students.map((s) => [
+  const headers = [
+    'STT',
+    'Mã học sinh',
+    'Họ và tên học sinh',
+    'Ngày tháng năm sinh',
+    'Giới tính',
+    'Dân tộc',
+    'Chỗ ở hiện tại',
+    'SĐT liên hệ CMHS',
+    'Tổ / Nhóm học tập',
+    'Số nhiệm vụ hoàn thành',
+    'Tổng điểm',
+    'Huy hiệu đạt được',
+    'Tình trạng học tập',
+  ];
+  const rows = students.map((s, idx) => [
+    idx + 1,
     s.code,
     `"${s.name}"`,
+    `"${s.birthDate || ''}"`,
+    `"${s.gender || ''}"`,
+    `"${s.ethnicity || 'Kinh'}"`,
+    `"${s.address || 'Thông Quan - KC'}"`,
+    `"${s.parentPhone || ''}"`,
     `"${s.group}"`,
     s.completedTasksCount,
     s.totalScore,

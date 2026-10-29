@@ -173,7 +173,7 @@ export const ProgressTracker: React.FC<ProgressTrackerProps> = ({
                 <span>Học sinh cần được quan tâm thêm trong tuần:</span>
               </div>
               <p className="text-slate-700 leading-relaxed font-semibold">
-                Lê Hoàng Long và Đặng Hà My cần được chia vào nhóm có bạn học khá (như Minh An, Phương Linh) ở Trạm 3 để được hướng dẫn phương pháp đếm thêm 7.
+                Nguyễn Tuấn Anh, Trần Văn Bình và Phạm Văn Khánh cần được chia vào nhóm có bạn tiếp thu nhanh (như Bảo An, Diệu An, Nguyệt Ánh, Gia Hân) ở Trạm 3 để được hướng dẫn phương pháp đếm thêm 7 và phân biệt từ ngữ.
               </p>
             </div>
 

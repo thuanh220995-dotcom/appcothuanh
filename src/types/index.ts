@@ -123,6 +123,11 @@ export interface Student {
   badges: string[];
   needsSupport?: boolean;
   notes?: string;
+  birthDate?: string;
+  gender?: 'Nam' | 'Nữ';
+  ethnicity?: string;
+  address?: string;
+  parentPhone?: string;
 }
 
 export interface StudentStationResult {

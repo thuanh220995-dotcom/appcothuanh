@@ -38,14 +38,22 @@ export default function App() {
     return SAMPLE_LESSONS;
   });
 
-  // Persistent Students state
+  // Persistent Students state (automatically loads official 33 students of Class 3D)
   const [students, setStudents] = useState<Student[]>(() => {
     try {
+      const savedVersion = localStorage.getItem('ai_cung_em_students_version');
       const saved = localStorage.getItem('ai_cung_em_students');
-      if (saved) return JSON.parse(saved);
+      if (saved && savedVersion === 'v_33_official_2026_2027') {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length >= 33) {
+          return parsed;
+        }
+      }
     } catch (e) {
       console.warn('Could not read saved students:', e);
     }
+    // Default to the 33 official students of Class 3D
+    localStorage.setItem('ai_cung_em_students_version', 'v_33_official_2026_2027');
     return SAMPLE_STUDENTS;
   });
 
